@@ -1,0 +1,19 @@
+{
+  "name": "ADO MCP DevContainer",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "node",
+
+  // (optioneel maar handig) expliciete workspace mount
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-vscode.remote-containers"
+      ]
+    }
+  }
+}
